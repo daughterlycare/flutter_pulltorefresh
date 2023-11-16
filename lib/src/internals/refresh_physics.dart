@@ -7,7 +7,6 @@ import 'dart:math' as math;
 
 // ignore_for_file: INVALID_USE_OF_PROTECTED_MEMBER
 // ignore_for_file: INVALID_USE_OF_VISIBLE_FOR_TESTING_MEMBER
-import 'package:flutter/physics.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
@@ -38,7 +37,7 @@ class RefreshPhysics extends ScrollPhysics {
 
   /// Creates scroll physics that bounce back from the edge.
   RefreshPhysics(
-      {ScrollPhysics? parent,
+      {super.parent,
       this.updateFlag,
       this.maxUnderScrollExtent,
       this.springDescription,
@@ -48,8 +47,7 @@ class RefreshPhysics extends ScrollPhysics {
       this.bottomHitBoundary,
       this.enableScrollWhenRefreshCompleted,
       this.enableScrollWhenTwoLevel,
-      this.maxOverScrollExtent})
-      : super(parent: parent);
+      this.maxOverScrollExtent});
 
   @override
   RefreshPhysics applyTo(ScrollPhysics? ancestor) {

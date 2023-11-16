@@ -4,7 +4,8 @@
     createTime: 2019-07-20 20:58
  */
 
-import 'package:flutter/material.dart' hide RefreshIndicatorState, RefreshIndicator;
+import 'package:flutter/material.dart'
+    hide RefreshIndicatorState, RefreshIndicator;
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class TestHeader extends RefreshIndicator {
@@ -38,6 +39,16 @@ class _TestHeaderState extends RefreshIndicatorState<TestHeader> {
                                     ? "twoLevelOpening"
                                     : "twoLeveling");
   }
+
+  @override
+  void onModeChange(RefreshStatus? mode) {
+    // TODO: implement onModeChange
+  }
+
+  @override
+  void onOffsetChange(double offset) {
+    // TODO: implement onOffsetChange
+  }
 }
 
 class TestFooter extends LoadIndicator {
@@ -60,5 +71,26 @@ class _TestFooterState extends LoadIndicatorState<TestFooter> {
             : mode == LoadStatus.idle
                 ? "idle"
                 : "noData");
+  }
+
+  @override
+  void onModeChange(LoadStatus? mode) {
+    // TODO: implement onModeChange
+  }
+
+  @override
+  void onOffsetChange(double offset) {
+    // TODO: implement onOffsetChange
+  }
+
+  @override
+  Future readyToLoad() {
+    // TODO: implement readyToLoad
+    throw UnimplementedError();
+  }
+
+  @override
+  void resetValue() {
+    // TODO: implement resetValue
   }
 }
