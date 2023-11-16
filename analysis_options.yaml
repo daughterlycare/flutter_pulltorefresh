@@ -1,0 +1,67 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude: ['example', '**.mocks.dart', '**.g.dart', '**.freezed.dart', '**.config.dart']
+  errors:
+    todo: ignore
+    unused_import: ignore
+    avoid_print: ignore
+    unnecessary_this: ignore
+    non_constant_identifier_names: ignore
+    constant_identifier_names: ignore
+    avoid_unnecessary_containers: ignore
+    prefer_single_quotes: ignore
+    sized_box_for_whitespace: ignore
+    prefer_generic_function_type_aliases: ignore
+    use_key_in_widget_constructors: ignore
+    sort_constructors_first: ignore
+    prefer_equal_for_default_values: ignore
+    sort_child_properties_last: ignore
+    annotate_overrides: ignore
+    prefer_const_declarations: ignore
+    no_leading_underscores_for_local_identifiers: ignore
+    overridden_fields: ignore
+
+linter:
+  rules:
+    # ------ Disable individual rules ----- #
+    #                 ---                   #
+    # Turn off what you don't like.         #
+    # ------------------------------------- #
+
+    # Use parameter order as in json response
+    always_put_required_named_parameters_first: false
+    
+    # Util classes are awesome!
+    avoid_classes_with_only_static_members: false
+
+
+    # ------ Enable individual rules ------ #
+    #                 ---                   #
+    # These rules here are good but too     #
+    # opinionated to enable them by default #
+    # ------------------------------------- #
+
+    # Make constructors the first thing in every class
+    sort_constructors_first: true
+
+    # The new tabs vs. spaces. Choose wisely
+    prefer_single_quotes: true
+    # prefer_double_quotes: true
+
+    # Good packages document everything - change to true later
+    public_member_api_docs: false
+    
+    # Blindly follow the Flutter code style, which prefers types everywhere
+    # always_specify_types: true
+  
+    # Back to the 80s
+    lines_longer_than_80_chars: false
+
+    # unnecessary_this: true
+
+    # const
+    unnecessary_const: true
+    prefer_const_constructors: false
+    prefer_const_declarations: true
+    prefer_const_literals_to_create_immutables: true
